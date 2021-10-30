@@ -37,3 +37,18 @@ select {
     box-shadow: none;
     border-color: black;
 }
+
+.fa-plus {
+    color: green;
+    margin: 5px;
+}
+
+.fa-minus {
+    color: red;
+    margin: 5px
+}
+
+input {
+    margin-top: 10px;
+    box-shadow: none;
+}

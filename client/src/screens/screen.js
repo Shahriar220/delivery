@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllPizza } from "../redux/actions/pizzaAction";
 //import pizzas from "../piazzadata";
 import Pizza from "../components/pizza";
+import Loading from "../components/loading";
+import Error from "../components/error";
 export default function Homescreen() {
   const dispatch = useDispatch();
   const pizzaState = useSelector((state) => state.getAllPizza);
@@ -14,9 +16,9 @@ export default function Homescreen() {
     <div>
       <div className="row justify-content-center">
         {loading ? (
-          <h1>Loading</h1>
+          <Loading />
         ) : error ? (
-          <h1>Something went wrong</h1>
+          <Error error="Something went wrong" />
         ) : (
           pizzas.map((pizza) => {
             return (
